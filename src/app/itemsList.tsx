@@ -11,8 +11,9 @@ export function ItemsList({ items }: Props) {
   return (
     <ul className="w-full grid grid-cols-responsive gap-6 p-6">
       {
-        items.map(item => (
+        items.map((item, index) => (
           <Link
+            key={index}
             href={"https://youtube.com"}
             className="group aspect-[3/2] grid grid-rows-5 hover:shadow-md transition-shadow duration-300 shadow-sm rounded-xl border border-border">
             <div className="row-span-3 border-b border-border"></div>
