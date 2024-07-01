@@ -17,7 +17,7 @@ export function ItemsList({ items }: Props) {
         items.map((item, index) => (
           <Sheet key={index}>
             <article className=" hover:shadow-md transition-shadow duration-300 shadow-sm rounded-xl overflow-hidden border border-border">
-              <SheetTrigger className="w-full" >
+              <SheetTrigger className="" >
                 <div className="w-full grid grid-rows-5">
                   <div className="row-span-3 border-b border-border"></div>
                   <section className="row-span-2 p-4 items-start flex flex-col gap-2">
