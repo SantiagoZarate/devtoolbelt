@@ -1,11 +1,11 @@
-import { ItemsList } from "./itemsList";
-import { Item } from "@/types/item";
-import { items } from "@/data/items";
-import { CategoriesSidebar } from "./CategoriesSidebar";
 import { SearchMiniIcon } from "@/components/icons/SearchMiniIcon";
+import { getToolsWithCategories } from "@/data/querys";
+import { ToolWithCategories } from "@/types/tool";
+import { CategoriesSidebar } from "./CategoriesSidebar";
+import { ItemsList } from "./itemsList";
 
 export default async function Home() {
-  let data: Item[] = items
+  const tools: ToolWithCategories[] = await getToolsWithCategories()
 
   return (
     <main className="flex h-full">
@@ -18,7 +18,7 @@ export default async function Home() {
             type="text"
             placeholder="i love using devtoolsbelt!" />
         </div>
-        <ItemsList items={data} />
+        <ItemsList items={tools} />
       </section>
     </main>
   )
