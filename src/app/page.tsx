@@ -1,10 +1,10 @@
 import { CategoriesSidebar } from "@/components/sidebar/CategoriesSidebar";
 import { ToolsSearch } from "@/components/tool/ToolsSearch";
-import { getToolsWithCategories } from "@/data/querys";
+import toolAPI from "@/api/tool";
 import { ToolWithCategories } from "@/types/tool";
 
 export default async function Home() {
-  const tools: ToolWithCategories[] = await getToolsWithCategories()
+  const tools: ToolWithCategories[] = await toolAPI.getToolsWithCategories()
 
   return (
     <main className="flex h-full">

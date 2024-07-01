@@ -1,9 +1,9 @@
 import { CategoriesList } from "@/components/sidebar/CategoriesList";
 import { Text } from "@/components/ui/Text";
-import { db } from "../../../drizzle/db";
+import categoryAPI from '@/api/category'
 
 export async function CategoriesSidebar() {
-  const categories = await db.query.categories.findMany()
+  const categories = await categoryAPI.getAll()
 
   return (
     <aside className="w-[300px] border-r border-border">

@@ -27,7 +27,7 @@ export function ToolsSearch({ tools }: Props) {
       <div className="flex items-center w-full border-b border-border px-6">
         <SearchMiniIcon />
         <input
-          className="w-full py-6 px-2"
+          className="w-full py-6 px-2 bg-background"
           type="text"
           value={search}
           onChange={(e) => handleOnChange(e.target.value)}
