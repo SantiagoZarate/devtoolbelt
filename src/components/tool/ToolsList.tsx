@@ -10,7 +10,7 @@ export function ToolsList({ tools }: Props) {
     <ul className="w-full grid grid-cols-responsive gap-6 p-6">
       {
         tools.map(item => (
-          <Tool key={item.id} {...item} />
+          <Tool key={item.name} {...item} />
         ))
       }
     </ul>

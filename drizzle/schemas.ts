@@ -11,7 +11,8 @@ export const tools = sqliteTable('tools', {
   name: text('title').notNull(),
   description: text('description').notNull(),
   imageURL: text('imageURL'),
-  author: text('author')
+  author: text('author'),
+  href: text('href').notNull().default('')
 });
 
 export const categoriesToTools = sqliteTable('categories_to_tools', {

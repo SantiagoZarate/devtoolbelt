@@ -15,6 +15,20 @@
       "when": 1719852799175,
       "tag": "0001_illegal_preak",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1719860207232,
+      "tag": "0002_shallow_rachel_grey",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1719860452070,
+      "tag": "0003_ambiguous_the_stranger",
+      "breakpoints": true
     }
   ]
 }

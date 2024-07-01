@@ -11,6 +11,7 @@ interface Props {
 
 export function ToolsSearch({ tools }: Props) {
   const [search, setSearch] = useState("")
+  console.log(tools)
 
   const handleOnChange = (string: string) => {
     if (string.startsWith(" ")) {

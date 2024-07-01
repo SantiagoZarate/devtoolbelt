@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 interface Props extends ToolWithCategories {
 }
 
-export function Tool({ author, description, id, imageURL, name, categories }: Props) {
+export function Tool({ author, description, id, imageURL, name, categories, href }: Props) {
   return (
     <Sheet>
       <article className=" hover:shadow-md transition-shadow duration-300 shadow-sm rounded-xl overflow-hidden border border-border">
@@ -21,7 +21,7 @@ export function Tool({ author, description, id, imageURL, name, categories }: Pr
               <div className="flex gap-2">
                 {
                   categories.map(cat => (
-                    <span className="px-2 py-1 rounded-full border border-border">
+                    <span key={cat} className="px-2 py-1 rounded-full border border-border">
                       <Text size={"small"} intent={"details"}>{cat}</Text>
                     </span>
                   ))
@@ -31,7 +31,7 @@ export function Tool({ author, description, id, imageURL, name, categories }: Pr
           </div>
         </SheetTrigger>
         <footer className="flex border-t divide-x border-border">
-          <a href={"https://youtube.com"} target="_blank" className="group flex-1 justify-center group flex items-center gap-1 px-4 py-4 hover:bg-secondary transition">
+          <a href={href} target="_blank" className="group flex-1 justify-center group flex items-center gap-1 px-4 py-4 hover:bg-secondary transition">
             <Text size={"small"} hoverable>Open</Text>
             <span className="group-hover:-translate-y-[2px] group-hover:translate-x-[2px] group-hover:opacity-100 opacity-50 transition duration-150 ">
               <ArrowRightTopMicroIcon />
@@ -47,8 +47,11 @@ export function Tool({ author, description, id, imageURL, name, categories }: Pr
       </article>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>{name}</SheetTitle>
-          <SheetDescription>
+          <SheetTitle>
+            {name}
+          </SheetTitle>
+          <SheetDescription className="flex flex-col gap-4">
+            <Text>by {author}</Text>
             {description}
           </SheetDescription>
         </SheetHeader>

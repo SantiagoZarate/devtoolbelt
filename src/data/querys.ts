@@ -11,6 +11,7 @@ export async function getToolsWithCategories(): Promise<ToolWithCategories[]> {
       description: tools.description,
       imageURL: tools.imageURL,
       author: tools.author,
+      href: tools.href,
       categoryId: categories.id,
       categoryName: categories.name
     })
@@ -26,6 +27,7 @@ export async function getToolsWithCategories(): Promise<ToolWithCategories[]> {
       toolsMap[row.toolId] = {
         id: row.toolId,
         name: row.toolName,
+        href: row.href,
         description: row.description,
         imageURL: row.imageURL,
         author: row.author,
