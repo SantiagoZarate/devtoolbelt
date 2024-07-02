@@ -6,7 +6,7 @@ export async function CategoriesSidebar() {
   const categories = await categoryAPI.getAll()
 
   return (
-    <aside className="w-[300px] border-r border-border">
+    <aside className="fixed h-full left-0 w-[300px] border-r border-border">
       <header className="p-4">
         <Text>Categories:</Text>
       </header>
