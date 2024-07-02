@@ -1,0 +1,1 @@
+export const DEFAULT_TOOL_IMAGE = 'https://cdn0.iconfinder.com/data/icons/objects-things-essential-vol-1/48/v-26-512.png'
