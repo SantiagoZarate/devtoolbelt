@@ -1,0 +1,34 @@
+@property --color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #12bcff;
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #12f1a7;
+}
+
+@property --color-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0010a3;
+}
+
+.outlined {
+  background: -webkit-linear-gradient(-91deg, var(--color-1) 5%, var(--color-2) 53%, var(--color-3) 91%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 58px;
+  animation: stoke-text 2s infinite alternate;
+}
+
+@keyframes stoke-text {
+  100% {
+    --color-1: #12f1a7;
+    --color-2: #0010a3;
+    --color-3: #12bcff;
+  }
+}

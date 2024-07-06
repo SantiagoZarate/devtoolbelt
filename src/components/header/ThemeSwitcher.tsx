@@ -12,6 +12,10 @@ export function ThemeSwitcher() {
     setMounted(true)
   }, [])
 
+  if (!mounted) {
+    return <div />
+  }
+
   return theme === "light"
     ?
     <Button onClick={() => setTheme("dark")}>

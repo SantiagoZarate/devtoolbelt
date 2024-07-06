@@ -76,6 +76,9 @@ const config = {
         "responsive": "repeat(auto-fill, minmax(23rem, 1fr))"
       }
     },
+    fontFamily: {
+      sans: ['var(--font-sanFrancisco)']
+    }
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config
