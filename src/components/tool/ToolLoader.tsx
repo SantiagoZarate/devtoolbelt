@@ -27,7 +27,7 @@ export function ToolsListLoader() {
   return (
     <ul className="w-full grid grid-cols-responsive gap-6 p-6">
       {
-        [1, 2, 3, 4, 5].map(n => <ToolLoader />)
+        Array.from({ length: 10 }).map(n => <ToolLoader />)
       }
     </ul>
   )

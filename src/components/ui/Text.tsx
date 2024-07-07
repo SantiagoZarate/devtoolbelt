@@ -16,7 +16,7 @@ const styles = cva(
       size: {
         small: "text-xs",
         regular: "text-base",
-        big: "text-xl"
+        big: "text-2xl"
       }
     },
     defaultVariants: {

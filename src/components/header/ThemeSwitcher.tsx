@@ -1,8 +1,9 @@
 "use client"
 
 import useTheme from "next-theme";
-import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
+import { MoonIcon } from "../icons/MoonIcon";
+import { SunIcon } from "../icons/SunIcon";
 
 export function ThemeSwitcher() {
   const { setTheme, theme } = useTheme()
@@ -16,13 +17,11 @@ export function ThemeSwitcher() {
     return <div />
   }
 
-  return theme === "light"
-    ?
-    <Button onClick={() => setTheme("dark")}>
-      toggle!
-    </Button>
-    :
-    <Button onClick={() => setTheme("light")}>
-      toggle!
-    </Button>
+  return (
+    <button
+      className="p-2 hover:bg-border duration-150 transition rounded-lg"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      {theme === "light" ? <MoonIcon /> : <SunIcon />}
+    </button>
+  )
 }

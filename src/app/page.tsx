@@ -1,19 +1,19 @@
-import { CategoriesSidebar } from "@/components/sidebar/CategoriesSidebar";
-import { ToolsSearch } from "@/components/tool/ToolsSearch";
-import toolAPI from "@/api/tool";
-import { ToolWithCategories } from "@/types/tool";
 import { HeroSection } from "@/components/hero/HeroSection";
+import { CategoriesSidebar } from "@/components/sidebar/CategoriesSidebar";
+import { ToolsListLoader } from "@/components/tool/ToolLoader";
+import { ToolsFetcher } from "@/components/tool/ToolsFetcher";
+import { Suspense } from "react";
 
-export default async function Home() {
-  const tools: ToolWithCategories[] = await toolAPI.getToolsWithCategories()
-
+export default function Home() {
   return (
     <main className="flex flex-col">
       <HeroSection />
       <section className="relative flex">
         <CategoriesSidebar />
         <section className="w-full border-l border-border">
-          <ToolsSearch tools={tools} />
+          <Suspense fallback={<ToolsListLoader />}>
+            <ToolsFetcher />
+          </Suspense>
         </section>
       </section>
     </main>
