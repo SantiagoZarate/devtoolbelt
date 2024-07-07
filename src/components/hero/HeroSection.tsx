@@ -1,3 +1,6 @@
+import { LeftArrowMicroIcon } from "../icons/LeftArrowMicroIcon"
+import { Button } from "../ui/button"
+import { AddToolSheet } from "./AddToolSheet"
 import { FloatingImages } from "./FloatingImages"
 import "./heroSection.css"
 
@@ -15,6 +18,7 @@ export function HeroSection() {
           <span className="text-xs font-bold rounded-full px-3 py-1 bg-secondary w-fit">More than 100 resources</span>
           <h1 className="text-6xl font-bold">All the <span className="outlined">tools</span> that you would ever need</h1>
           <p className="text-xl text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis veritatis maiores, dolorem aspernatur autem?</p>
+          <AddToolSheet />
         </div>
         <FloatingImages />
       </article>
